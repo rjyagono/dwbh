@@ -1,8 +1,8 @@
 # Change these
-server '188.166.255.242', roles: [:web, :app, :db], primary: true
+server '128.199.218.114', roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/rjyagono/gamefowl'
-set :application,     'gamefowl'
+set :repo_url,        'https://github.com/rjyagono/dwbh'
+set :application,     'dwbh'
 set :user,            'root'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
@@ -29,6 +29,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :format,        :pretty
 # set :log_level,     :debug
 # set :keep_releases, 5
+
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
