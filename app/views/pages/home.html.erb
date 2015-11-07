@@ -1,0 +1,285 @@
+<section id="header" class="header" data-sr="enter left, hustle 20px">
+   <div class="container">
+   
+    <div class="col-sm-7 text">
+        <h1 class="short-text" >Need an easy and fast <strong class="cash">Cash?</strong></h1>
+        <div class="short-text">
+          <p class="short-text">
+            We have been working very hard to create the new version of our course. 
+            It comes with a lot of new features, easy to follow videos and images. Check it out now!
+          </p>
+        </div>
+        <div class="top-big-link text-center">
+          <a href="/downloads/ApplicationForm.docx" class="btn"><%= image_tag "download-button.png" , class: 'img-responsive', style: 'width: 250px' %></a>
+          <!--<a href="#features" class="btn btn-primary btn-lg round"><%= image_tag "download-button1.png" , class: 'img-responsive' %></a>-->
+        </div>
+    </div>
+     <div class="col-sm-5 form-box wow fadeInUp animated">
+              <div id="main-form" class="contact-form">
+                  <div id="app-form">
+                      <h3 class="text-center">Application Form</h3>
+                      <p class="text-center">Fill out our short online application to get pre-approved in minutes</p>
+                        
+                        <form method="post" data-remote="true" accept-charset="UTF-8" action="/clients" id="new_user" class="client_form">
+                        <div class="row">
+                          <div class="col-md-6 col-md-offset-2" id="task-form" style="display:none;"></div>
+                        </div>
+
+                        <div id="error_explanation" style='display:none;'>
+                          <ul>
+                            <% if @client.errors.any? %>
+                              <% @client.errors.full_messages.each do |msg| %>
+                                <li><%= msg %></li>
+                              <% end %>
+                            <% end %>
+                          </ul>
+                        </div>
+                          
+                        <div class="form-group">
+                          <input type="text" maxlength="100" id="client" name="client[name]" placeholder="Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" maxlength="100" id="client" name="client[email]" placeholder="Email" class="form-control" data-error="Email address is invalid" required>                    
+                        </div>
+                        <div class="input-group form-group">
+                          <span class="input-group-addon">+63</span>
+                          <input type="text" class="form-control" aria-label="Phone" name="client[phone]" placeholder="Mobile" required>
+                        </div>
+
+                        <input type="submit" value="Get pre-approved »" name="yt0" class="btn btn-yellow pull-right btn-approve">  
+  
+                        <div class="form-group clearfix"></div>
+
+                    </form>
+                </div>
+              </div>
+          </div>
+
+    <div class="clearfix"></div>
+     
+                       <div class="row front-msg">
+                        <div class="col-lg-4">
+                          <div class="short-text">
+                            <i class="glyphicon glyphicon-circle-arrow-down"></i> Lowest interest rates
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="short-text">
+                            <i class="glyphicon glyphicon-flash"></i> Fast and reliable loan
+                          </div>
+                        </div>
+                        <div class="col-lg-4 ">
+                          <div class="short-text">
+                            <i class="glyphicon glyphicon-ok"></i> Accurate appraisals
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="short-text">
+                            <i class="glyphicon glyphicon-glass"></i> Hassle-free and convenient
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="short-text">
+                            <i class="glyphicon glyphicon-calendar"></i> Flexible terms of payment
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="short-text">
+                            <i class="glyphicon glyphicon-gift"></i> Great incentives and benefits
+                          </div>
+                        </div>
+                      </div>
+</div>
+  
+    </section>
+
+<div class="top"></div>
+<section class="services" id="services">
+                <div id="features">
+                        <div class="container">
+                            <div data-sr="move 16px scale up 20%, over 2s" class="row header">
+                                <div class="col-md-12">
+                                    <h2 class="title text-center">Here is everything we offer</h2>
+                                    <p class="intro text-center">Our proficiency comes with our Mortgage Loan Facility, which is a term-convenient loan program for a Real Estate Property or Chattel (Vehicle) Mortgage with a maximum loanable amount and with the highest appraisal value compared to other loan institutions. </p>
+                                </div>
+                            </div>
+                            <div data-sr="move 16px scale up 20%, over 2s" class="row feature">
+                                <div class="col-md-6 info">
+                                    <h3 class="mini-title">Real Estate Mortgage</h3>
+                                    <p>
+                                      </p><dl class="dl-horizontal">
+                                          <dt>Interest rates:</dt>
+                                          <dd>1.5%</dd>
+                                          <br>
+                                          <dt>Terms to Choose:</dt>
+                                          <dd>3 months&nbsp;&nbsp;&nbsp;&nbsp;6 months&nbsp;&nbsp;&nbsp;&nbsp;9 months&nbsp;&nbsp;&nbsp;&nbsp;12 months <br> 
+                                          18 months&nbsp;&nbsp;&nbsp;24 months&nbsp;&nbsp;&nbsp;36 months&nbsp;&nbsp;&nbsp;48 months</dd>
+                                          <br>
+                                          <dt>Loanable Amount:</dt>
+                                          <dd>P50, 000 &nbsp;&nbsp;---&nbsp;&nbsp; P 1,000,000</dd>
+                                      </dl>
+                                    <p></p>
+                                </div>
+                                <div class="col-md-6 image">
+                                    <%= image_tag "feature1.jpg" , class: 'img-responsive' %>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                            <div data-sr="move 16px scale up 20%, over 2s" class="row feature backwards"  id="info">
+                                <div class="col-md-6 image">
+                                    <%= image_tag "feature2.jpg", class: 'img-responsive' %>
+                                </div>
+                                <div class="col-md-6 info">
+                                    <h3 class="mini-title">Chattel Mortgage</h3>
+                                    <p>
+
+                                   </p><dl class="dl-horizontal">
+                                          <dt>Interest rates:</dt>
+                                          <dd>3.0%</dd>
+                                          <br>
+                                          <dt>Terms to Choose:</dt>
+                                          <dd>3 months&nbsp;&nbsp;&nbsp;&nbsp;6 months&nbsp;&nbsp;&nbsp;&nbsp;9 months&nbsp;&nbsp;&nbsp;&nbsp;12 months <br> 
+                                          18 months&nbsp;&nbsp;&nbsp;24 months</dd>
+                                          <br>
+                                          <dt>Loanable Amount:</dt>
+                                          <dd>P15,000 &nbsp;&nbsp;---&nbsp;&nbsp; P 200,000</dd>
+                                      </dl>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                            <div data-sr="move 16px scale up 20%, over 2s" aria-multiselectable="true" role="tablist" id="accordion" class="panel-group">
+
+                              
+                            <div class="container">
+                                                     
+                                <div class="info">
+                                    <h3 class="mini-title">LOANS <small>Services / Requirements:</small></h3>
+                                  
+                                </div>
+                              
+                              <div class="col-lg-4">     
+                               <div class="list-group">
+                                    <a href="#info" class="list-group-item active">
+                                        <span class="glyphicon glyphicon-list-alt"></span></span> Loans <small>(Business,Salary,Allottee,Seaman etc.)</small>
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-user"></span>  2 Valid ID's
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-camera"></span> 1 pc. Picture (2x2)
+                                        
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Marriage Contract (if married)
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Latest Utility Bill (veco/mswd)
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Latest Cedula
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-usd"></span> Proof of Income
+                                    </a>
+                                </div>
+                              </div>
+                              
+                              <div class="col-lg-4">
+                               <div class="list-group">
+                                    <a href="#info" class="list-group-item active">
+                                        <span class="glyphicon glyphicon-home"></span> Real Estate Mortgage
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span>   Land Title
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Tax Declaration
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span>  Tax Clearance
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Sketch Plan/ Survey
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> CAR
+                                    </a>
+                                </div>    
+                               </div>
+                              
+                              <div class="col-lg-4">
+                               <div class="list-group">
+                                    <a href="#info" class="list-group-item active">
+                                        <span class="glyphicon glyphicon-road"></span> Chattel Mortgage
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> CR
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> OR
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Stencil Engine
+                                    </a>
+                                    <a href="#info" class="list-group-item">
+                                        <span class="glyphicon glyphicon-file"></span> Stencil Chassis
+                                    </a>
+                                </div>    
+                               </div>
+
+                     
+                              <br/>
+                                    <div class="row">
+                                      <button type="button" class="list-group-item"><b>Coverage Areas:</b>
+                                        <small>Carcar City, San Fernando, Minglanilla, Talisay City, Cebu City, Mandaue City, Lapu-lapu City, Consolacion, Compostela, Liloan, Danao City</small></button>
+                                      <button type="button" class="list-group-item"><b>Mode of Payment: </b><small>Post-dated checks</small></button>
+                                      <button type="button" class="list-group-item"><b>Processing Time: </b><small>1 day processing loan</small></button>
+                                    </div>
+                            </div>
+                        </div>      
+                </div>
+</section>
+<!--<div class="bottom"></div>-->
+
+<section class="calculator" id="calculator" style="visibility: visible; ">
+      <div class="container">  
+          <div class="row feature">
+            <div class="text-center">
+
+                    <h2 class="title text-center short-text">Basic Loan Calculation</h2>
+                    <p class="intro text-center short-text">This loan calculator will help you determine the monthly payments on a loan. Simply enter the loan amount, term and interest rate in the fields below.</p>
+
+                    <div class="col-lg-12 calculator-box">
+                      <div class="col-lg-6 thirty form ">
+                        <div class="accrue-field-amount">
+                          <p><label>Loan Amount:</label>
+                            <input type="text" value="P10,000" class="amount form-control"></p>
+                        </div>
+                        <div class="accrue-field-rate">
+                          <p><label>Interest Rate:</label><input type="text" value="1.5%" class="rate form-control"><small>Format: 1%, 1.5%, 2% etc.</small></p>
+                        </div>
+                        <div class="accrue-field-term">
+                          <p><label>Term / Months:</label><input type="text" value="3m" class="term form-control"><small>Format: 12m, 24m, 36m etc.</small></p>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 thirty">
+                        <p><label>Results:</label></p>
+                        <div class="results">
+                          <p style="display:none"><strong>Monthly Payment:</strong><br>P3833.33</p>
+                          <p><strong>Number of Payments:</strong><br>3</p>
+                          <p><strong>Total Payments:</strong><br>P11500.00</p>
+                          <p style="display:none"><strong>Total Interest:</strong><br>P1500.00</p></div>
+                      </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+        </div>                      
+      </div>
+  </div>
+</section>
+

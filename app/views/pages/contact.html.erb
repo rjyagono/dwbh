@@ -1,0 +1,178 @@
+    <!-- Contact Section -->
+    <section id="contact" class="contact"  data-sr="move 16px scale up 20%, over 2s">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="title text-center short-text">Get in touch</h3>
+                    <p class="mini-title text-center short-text">Have any question? Drop us a message. We will get back to you in 24 hours. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 contact-box ">
+
+                    <form method="post" data-remote="true" accept-charset="UTF-8" action="/clients" id="new_user" class="client_form">
+                      
+                        <div id="error_explanation" style='display:none;'>
+                          <ul>
+                            <% if @client.errors.any? %>
+                              <% @client.errors.full_messages.each do |msg| %>
+                                <li><%= msg %></li>
+                              <% end %>
+                            <% end %>
+                          </ul>
+                        </div>
+                      
+                        <div class="form-group">
+                          <input type="text" maxlength="100" id="client" name="client[name]" placeholder="Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" maxlength="100" id="client" name="client[email]" placeholder="Email" class="form-control" data-error="Email address is invalid" required>
+                        </div>
+                      
+                        <div class="input-group form-group">
+                          <span class="input-group-addon">+63</span>
+                          <input type="text" id="clientmobile" maxlength="14" data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN" required="required" data-fv-notempty-message="This field cannot be left blank." placeholder="Mobile No. " class="form-control" name="client[phone]" data-fv-field="client[phone]">
+                        </div>
+                      
+                        <div class="form-group">
+                          <textarea style="height:100%" rows="5" class="form-control input-box" placeholder="Message" id="message" required data-validation-required-message="Enter a message."></textarea>
+                        </div>
+
+  <!--                  <div class="col-md-12 control-group controls">
+                          <h6>File input</h6>
+                          <input type="file" id="exampleInputFile">
+                        </div> -->
+                        <br>
+                        <div class="form-group">
+                          <div id="success"></div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" data-scrollreveal="enter left after 0s over 1s" type="submit" class="btn submit-button red-button pull-right" data-sr-init="true" data-sr-complete="true">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="location" id="location">
+      <div class="container">    
+        <div class="row">
+                    <div class="col-md-12 " id="contact-form">
+                          <div class="col-md-4 ">
+                            <h2 class="title"><span class="fa fa-map-marker icon"></span> Main Branch</h2>
+                            <address> 
+                                Suite 3D, 3<sup>rd</sup> Flr., JL Millenium Bldg.,<br>
+                                Don Jose Avila St., Capitol Site, Cebu City<br>
+                                <i>(behind Bo's Coffee)</i>
+                                <br><br>
+                                Tel No. 253-5407<br>
+                                Telefax No. (032) 491-8288<br>
+                                Cell No, 0917-634-6071 / 0922-827-0866<br>
+                                Email Address: dwbh_hr@yahoo.com 
+                                <br><br>
+                                BUSINESS TIME:<br>
+                                Mondays - Saturdays*<br>
+                                8:30 A.M. - 5:30 P.M.<br>
+                                <font size="1"><b><i>*Saturdays for inquiries only.</i></b></font><br>
+                            </address>
+                          </div>
+                          <div class="col-md-8 ">
+                            <div id="map1" class="map1"></div>
+                          </div>
+                     </div>
+      </div>
+    </div>
+    </br>
+      <div class="container">    
+        <div class="row">
+                    <div class="col-md-12 " id="contact-form">
+                          <div class="col-md-4 ">
+                            <h2 class="title"><span class="fa fa-map-marker icon"></span> Talisay Branch</h2>
+                            <address>
+                              Rm 202, 2nd Flr., Deiparine Bldg.,<br>
+                              National Hi-way, Bulacao, Talisay City<br>
+                              <i>(beside VECO - Tabunok )</i>
+                              <br><br>
+                              Tel No. 268-6239<br>
+                              Telefax No. (032) 491-8288<br>
+                              Cell No, 0917-634-6071 / 0922-827-0866<br>
+                              Email Address: jacky_dwbh@yahoo.com 
+                              <br><br>
+                              BUSINESS TIME:<br>
+                              Mondays - Fridays<br>
+                              8:30 A.M. - 5:30 P.M.<br>
+                              </address>
+                          </div>
+                          <div class="col-md-8 ">
+                            <div id="map2" class="map2"></div>
+                          </div>
+                     </div>
+      </div>
+    </div>
+    <br/>
+          <div class="container">    
+        <div class="row">
+                    <div class="col-md-12 " id="contact-form">
+
+                          <div class="col-md-4 ">
+                            <h2 class="title"><span class="fa fa-map-marker icon"></span> Mandaue Branch</h2>
+                            <address>
+                              Ground Flr., PJ Ouano Bldg., <br>
+                              MC Briones, Highway, Mandaue City
+                              <br><br>
+                              Tel No. 422-3887<br>
+                              Telefax No. (032) 318-0184<br>
+                              Cell No, 0917-319-9897 / 0922-827-0867
+
+                              <br><br>
+                              BUSINESS TIME:<br>
+                              Mondays - Fridays<br>
+                              8:30 A.M. - 5:30 P.M.<br>
+                              </address>
+                          </div>
+                          <div class="col-md-8 ">
+                            <div id="map3" class="map3"></div>
+                          </div>
+                     </div>
+      </div>
+    </div>
+ 
+</section>
+
+    <script src="//maps.google.com/maps/api/js?sensor=false"></script>
+
+		<script type="text/javascript">
+		    var latitudes = [10.314392, 10.267580, 10.333976];
+		    var longitudes = [123.890923, 123.842794, 123.937662];
+		
+		    function init_map() {
+		        var myLocation1 = new google.maps.LatLng(latitudes[0], longitudes[0]);
+		        var myLocation2 = new google.maps.LatLng(latitudes[1], longitudes[1]);
+		        var myLocation3 = new google.maps.LatLng(latitudes[2], longitudes[2]);
+		        
+		        var mapOptions1 = { center: myLocation1, zoom: 18 };
+		        var mapOptions2 = { center: myLocation2, zoom: 18 };
+		        var mapOptions3 = { center: myLocation3, zoom: 18};
+		        
+		        var marker1 = new google.maps.Marker({ position: myLocation1, title: "Property Location" });
+		        var marker2 = new google.maps.Marker({ position: myLocation2, title: "Property Location" });
+		        var marker3 = new google.maps.Marker({ position: myLocation3, title: "Property Location" });
+		        
+		        var map1 = new google.maps.Map(document.getElementById("map1"), mapOptions1);
+		        var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions2);
+		        var map3 = new google.maps.Map(document.getElementById("map3"), mapOptions3);
+		        
+		        marker1.setMap(map1);
+		        marker2.setMap(map2);
+		        marker3.setMap(map3);
+		    }
+		    
+		    
+		
+		    init_map();
+ 
+		</script>
