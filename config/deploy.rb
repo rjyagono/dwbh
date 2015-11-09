@@ -5,7 +5,7 @@ set :repo_url,        'https://github.com/rjyagono/dwbh'
 set :application,     'dwbh'
 set :user,            'root'
 set :puma_threads,    [4, 16]
-set :puma_workers,    0
+set :puma_workers,    1
 
 # Don't change these unless you know what you're doing
 set :pty,             true
@@ -33,7 +33,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
-set :linked_dirs,  %w{public/system}
+set :linked_dirs,  %w{public/system tmp/pids tmp/sockets log}
 #set :linked_dirs, fetch(:linked_dirs) + %w{public/images/uploads public/system}
 
 namespace :puma do
