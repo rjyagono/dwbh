@@ -24,7 +24,7 @@ html {
 
 body {
 //  padding-top: 60px;
- background: #0eb4b6 url("main1.png") no-repeat fixed 0 0 / cover ;
+ background: #0eb4b6 url(<%= asset_path 'main1.png' %>) no-repeat fixed 0 0 / cover ;
 
 //  background: #00aff0 none repeat scroll 0 0;
 // background: #d9edf7 none repeat scroll 0 0;
@@ -751,7 +751,7 @@ section.contact {
 }
 
 .header-section, .header-section.navbar-inverse {
-    background: rgba(0, 0, 0, 0) url("footer_bg.jpg") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url(<%= asset_path 'footer_bg.jpg' %>) repeat scroll 0 0;
     box-shadow: 0 1px rgba(255, 255, 255, 0.1);
     color: #ccc;
 }
