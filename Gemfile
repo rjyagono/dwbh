@@ -18,8 +18,8 @@ gem 'babosa'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'htmlentities'
-gem 'font-awesome-rails'
-
+# gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 4.4.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
@@ -33,10 +33,12 @@ end
 
 gem 'puma'
 
-gem 'sass-rails',   '~> 5.0.0'
-gem 'coffee-rails', '~> 4.1.0'
-gem 'coffee-script-source', '1.8.0'
-gem 'uglifier', '~> 2.7.0'
+group :assets do
+    gem 'sass-rails',   '~> 5.0.0'
+    gem 'coffee-rails', '~> 4.1.0'
+    gem 'coffee-script-source', '1.8.0'
+    gem 'uglifier', '~> 2.7.0'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
