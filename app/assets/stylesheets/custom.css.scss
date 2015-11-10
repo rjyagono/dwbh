@@ -751,7 +751,7 @@ section.contact {
 }
 
 .header-section, .header-section.navbar-inverse {
-    background: rgba(0, 0, 0, 0) url(<%= asset_path 'footer_bg.jpg' %>) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url('footer_bg.jpg') repeat scroll 0 0;
     box-shadow: 0 1px rgba(255, 255, 255, 0.1);
     color: #ccc;
 }
