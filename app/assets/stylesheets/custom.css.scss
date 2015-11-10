@@ -24,7 +24,7 @@ html {
 
 body {
 //  padding-top: 60px;
- background: #0eb4b6 url(<%= asset_data_uri 'main1.png' %>) no-repeat fixed 0 0 / cover ;
+ background: #0eb4b6 url('main1.png') no-repeat fixed 0 0 / cover ;
 
 //  background: #00aff0 none repeat scroll 0 0;
 // background: #d9edf7 none repeat scroll 0 0;
