@@ -27,7 +27,7 @@ html {
 
 body {
 //  padding-top: 60px;
- background: #0eb4b6 url(<%= asset_path 'main1.png' %>) no-repeat fixed 0 0 / cover ;
+ background-color: #0eb4b6; //url('main1.png') no-repeat fixed 0 0 / cover ;
 
 //  background: #00aff0 none repeat scroll 0 0;
 // background: #d9edf7 none repeat scroll 0 0;
@@ -39,6 +39,29 @@ body {
   font-weight: 300;
   line-height: 30px;
 }
+
+
+.header-section, .header-section.navbar-inverse {
+    // background: rgba(0, 0, 0, 0) url('footer_bg.jpg') repeat scroll 0 0;
+    background-color: #242b35;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1);
+    color: #ccc;
+}
+.header-section {
+    border: medium none;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    position: fixed;
+    transition: all 0.25s ease 0s;
+    z-index: 200;
+}
+
+.navbar-default {
+    border: 0 none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
 
 section {
   overflow: auto;
@@ -751,26 +774,6 @@ section.contact {
     transform: rotate(-45deg);
     width: 13px;
     z-index: 100;
-}
-
-.header-section, .header-section.navbar-inverse {
-    background: rgba(0, 0, 0, 0) url(<%= asset_path 'footer_bg.jpg' %>) repeat scroll 0 0;
-    box-shadow: 0 1px rgba(255, 255, 255, 0.1);
-    color: #ccc;
-}
-.header-section {
-    border: medium none;
-    margin: 0;
-    overflow: visible;
-    padding: 0;
-    position: fixed;
-    transition: all 0.25s ease 0s;
-    z-index: 200;
-}
-
-.navbar-default {
-    border: 0 none;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .product-section .other-info a {
