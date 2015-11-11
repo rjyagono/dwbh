@@ -135,7 +135,12 @@ p {
 }
 
 .navbar-brand {
-  padding: 6px 15px 8px;
+  padding: 1px 15px 8px;
+  height: 0px;
+  
+  span {
+    color: #fff;
+  }
 }
 
 .navbar-brand-admin {
@@ -978,7 +983,7 @@ footer .footer-below {
 }
 
 @media (max-width: 1500px) {
-    .navbar-text {
+    .navbar-text, .log-text {
         display: none;
     }
 }

@@ -1,6 +1,6 @@
 <header class="header-section section section-dark navbar navbar-fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header navbar-left page-scroll">
+    <div class="navbar-header navbar-left page-scroll" >
       <!-- RESPONSIVE MENU BUTTON -->
         <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
             <span class="sr-only">Toggle navigation</span>
@@ -8,17 +8,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-
-        <%= link_to root_path, :class => 'navbar-brand' do %>
-          <%= image_tag "dwbh.png" %>
-        <% end %>
+        <nav id="navigation" class="navbar-left">
+          <%= link_to root_path, :class => 'navbar-brand' do %>
+            <%= image_tag "dwbh.png" %>
+            <span class="log-text">Lending Investor</span>
+          <% end %>
+        </nav> 
         <nav id="navigation" class="navigation navbar-collapse navbar-right collapse" aria-expanded="false" style="height: 81px; ">
            <p class="navbar-text"><span class="glyphicon glyphicon-time"></span> Mon-Sat 8:30am - 5:30pm</p>
            <p class="navbar-text"><span class="glyphicon glyphicon-phone-alt"></span> (032) 253-5407</p>
            <p class="navbar-text"><span class="glyphicon glyphicon-phone"></span> Globe 0917-634-6071, Sun 0922-827-0866</p>
         </nav> 
     </div>
-     
+
     <nav id="navigation" class="navigation navbar-collapse navbar-right collapse" aria-expanded="false" style="height: 81px; ">
       <ul class="nav navbar-nav navbar-right">
         <li class="page-scroll "><%= link_to 'Home', '../#header', class: "#{action_name == "home" ? "active" : nil}"  %></li>
@@ -56,6 +58,7 @@
         <% end %>
 
       </ul>
-    </nav>
+    </nav>    
+
   </div>
 </header>
