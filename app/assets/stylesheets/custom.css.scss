@@ -1134,10 +1134,6 @@ input[type="text"], input[type="email"], input[type="number"], textarea, textare
   margin: 20px;
 }
 
-.sign_in_section {
-  height: 500px;
-}
-
 .white {
   color: $white;
 }
@@ -1343,4 +1339,16 @@ input[type="text"], input[type="email"], input[type="number"], textarea, textare
     border-style: solid;
     border-width: 0 100vw 200px 0;
     height: 0;
+}
+
+.social-account-wall {
+  padding-left: 10px;
+  background: transparent; 
+  box-shadow: none; 
+  text-align: center;
+  
+  img {
+    padding: 5px;
+    width: 80%;
+  }
 }

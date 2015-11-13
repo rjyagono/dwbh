@@ -6,8 +6,6 @@
     <%= display_meta_tags :site => ENV['title'], :reverse => true %>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= csrf_meta_tags %>
-
-    <link href="/favicon.ico" rel="shortcut icon">
     
     <style>
     
@@ -15,16 +13,13 @@
   </head>
   <body>
     <div class="container-fluid">
+    <%= render 'layouts/header' %>
       <%= render 'shared/flash_messages' %>
       <%= yield %>
 <!--      <%= debug(params) if Rails.env.development? %>-->
     </div>
       <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
+    <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="fa fa-angle-up"></i></a>
 
   </body>
   	

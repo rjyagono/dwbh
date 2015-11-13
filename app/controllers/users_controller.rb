@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   respond_to :html, :js
+  layout nil
   
   def index
   end

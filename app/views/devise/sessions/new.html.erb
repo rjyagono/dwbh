@@ -1,9 +1,18 @@
 <section>
   <div class="container">
-      <div class="row sign_in_section">
-          <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <div class="row account-wall">
+        
+          <div class="col-sm-12">
+              <div class="col-sm-6 social-account-wall">
+                <a href="/users/auth/facebook"><%= image_tag "fb.jpg" %></a>
+                <br>
+                <a href="/users/auth/twitter"><%= image_tag "twitter.jpg" %></a>
+                <br>
+                <a href="/users/auth/google_oauth2"><%= image_tag "google.jpg" %></a>
+                <br>
+              </div>
  
-              <div class="account-wall">
+              <div class="col-sm-4">
                   <%= form_for(resource, :as => resource_name, html: { class: "form-signin"}, :url => session_path(resource_name)) do |f| %>
                        <% if notice %>
                     	  <p class="alert alert-success"><%= notice %></p>
@@ -26,10 +35,13 @@
                   <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                  <% end %>
               </div>
-              <div class="panel-footer">
-                <%= render "devise/shared/links" %>
-              </div>
           </div>
+           <div class="col-sm-12 panel-footer">
+                <a href="/users/sign_up">Sign up</a>
+                <br>
+                <a href="/users/password/new">Forgot your password?</a>
+                <br>
+              </div>
       </div>
   </div>
 </section>
