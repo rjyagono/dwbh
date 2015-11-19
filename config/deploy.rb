@@ -33,7 +33,8 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
-set :linked_dirs,  %w{public/system tmp/pids tmp/sockets log}
+set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system log}
+
 #set :linked_dirs, fetch(:linked_dirs) + %w{public/images/uploads public/system}
 
 namespace :puma do
@@ -82,5 +83,6 @@ namespace :deploy do
 end
 
 # ps aux | grep puma    # Get puma pid
+# pkill -f puma   # Kill puma
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
