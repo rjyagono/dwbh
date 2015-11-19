@@ -24,22 +24,21 @@ class User < ActiveRecord::Base
     if authorization.user.blank?
       user = current_user || User.where('email = ?', auth["info"]["email"]).first
       if user.blank?
-       user = User.new
-       user.password = Devise.friendly_token[0,10]
-       user.name = auth.info.name
-       user.email = auth.info.email
+        user = User.new
+        user.password = Devise.friendly_token[0,10]
+        user.name = auth.info.name
+        user.email = auth.info.email
        
-       puts auth.info
-       if auth.provider == "twitter" 
-         user.save(validate: false) 
-       else
-         user.save
-       end
-     end
+        if auth.provider == "twitter" 
+          user.save(validate: false) 
+        else
+          user.save
+        end
+      end
      authorization.username = auth.info.nickname
      authorization.user_id = user.id
      authorization.save
-   end
+    end
    authorization.user
- end
+  end
 end

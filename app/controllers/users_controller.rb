@@ -22,7 +22,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    # 2015-07-23 RICHARD: Updated to use strong parameters
     if @user.update_attributes(client_params)
       redirect_to @user, notice: 'User was successfully updated.'
     else
