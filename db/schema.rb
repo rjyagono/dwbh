@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106081807) do
+ActiveRecord::Schema.define(version: 20151119070625) do
+
+  create_table "authorizations", force: :cascade do |t|
+    t.string   "provider",   limit: 255
+    t.string   "uid",        limit: 255
+    t.integer  "user_id",    limit: 4
+    t.string   "token",      limit: 255
+    t.string   "secret",     limit: 255
+    t.string   "username",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.boolean  "admin"
     t.string   "name",                   limit: 255
     t.string   "phone",                  limit: 255
-    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "email",                  limit: 255, default: ""
     t.string   "encrypted_password",     limit: 255, default: "", null: false
     t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
@@ -31,6 +42,9 @@ ActiveRecord::Schema.define(version: 20151106081807) do
     t.datetime "updated_at",                                      null: false
     t.string   "provider",               limit: 255
     t.string   "uid",                    limit: 255
+    t.string   "image",                  limit: 255
+    t.string   "location",               limit: 255
+    t.string   "username",               limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
