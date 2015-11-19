@@ -231,14 +231,16 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+  require 'devise/orm/active_record'
 
+  config.sign_out_via = :get
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, '80065531838', '0dd31f1c1664ceb1fdf0e987e2700edc'
-  config.omniauth :twitter, '80065531838', '0dd31f1c1664ceb1fdf0e987e2700edc'
-  config.omniauth :google_oauth2, '113961971625-mu9gdnf701tl5na0dv66bg4o6egqfpgv.apps.googleusercontent.com', 'I34_V5rGr_Mpy_aDv9VHj2Ck'
+  config.omniauth :facebook, '545268678973039', 'ac1584509fd852fe0c6695376138f5f7', { :scope => 'email', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :twitter, 'SmUB7OMeOn8yiziJ4N2aIvg92', '1UEIaqSjiVXhRseGLrVY6hQBJDTVqo22ZqCotvFKRA6LD9qXQ5', { :scope => 'r_fullprofile, r_emailaddress', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :google_oauth2, '113961971625-mu9gdnf701tl5na0dv66bg4o6egqfpgv.apps.googleusercontent.com', 'I34_V5rGr_Mpy_aDv9VHj2Ck', {}
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

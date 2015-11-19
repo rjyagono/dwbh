@@ -45,8 +45,19 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails_admin'
 gem 'kaminari'
+gem 'twitter'
+gem 'json'
+gem 'airbrake'
+gem 'koala'
 gem 'omniauth'
+gem 'omniauth-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
+gem 'jbuilder'
 
+group :development, :test do
+  gem 'byebug'
+  gem 'better_errors'
+  gem 'quiet_assets'
+end
