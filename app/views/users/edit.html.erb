@@ -6,7 +6,7 @@
 
                 <h2>Edit User</h2>
                 
-                <%= simple_form_for(@user, html: { method: :post, class: "form-signin" }) do |f| %>
+                <%= simple_form_for(@user, html: { method: :put, class: "form-signin" }) do |f| %>
                   <%= f.error_notification %>
                 
                   <div class="form-group">
