@@ -1357,3 +1357,7 @@ input[type="text"], input[type="email"], input[type="number"], textarea, textare
     width: 80%;
   }
 }
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+}
