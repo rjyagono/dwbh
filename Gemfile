@@ -55,6 +55,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 gem 'jbuilder'
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 
 group :development, :test do
   gem 'byebug'

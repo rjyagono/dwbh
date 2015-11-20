@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: "omniauth_callbacks" }
  
   
@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/contact', :to => 'pages#contact', :as => 'contact'
   
   root :to => 'pages#home'
+  ActiveAdmin.routes(self)
 end
