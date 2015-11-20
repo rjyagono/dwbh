@@ -28,28 +28,9 @@
         <li class="page-scroll >"><%= link_to 'Loan Calculator',  "../#calculator", class: "#{action_name == "calculator" ? "active" : nil}"  %></li>
         <li class="page-scroll "><%= link_to 'Contact Us', contact_path, class: "#{action_name == "contact" ? "active" : nil}"  %></li>
         <li class="page-scroll "><%= link_to 'F.A.Q', faq_path, class: "#{action_name == "faq" ? "active" : nil}"  %></li>
-<!--
-        <li id="fat-menu" class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            AMORTIZATION <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Users', '#' %></li>
-            <li><%= link_to 'Clients', '#' %></li>
-          </ul>
-        </li>
--->
             
         <% if user_signed_in? %>
-          <!--<% if current_user.admin? %>-->
-          <!--  <li id="fat-menu" class="dropdown">-->
-          <!--    <a href="../admin">-->
-          <!--      Admin-->
-          <!--    </a>-->
-          <!--  </li>-->
-          <!--<% end %>-->
-      
-            
+
           <li class="dropdown" role="presentation">
             <a aria-expanded="false" aria-haspopup="true" role="button" href="#" data-toggle="dropdown" class="dropdown-toggle">
               My Account<span class="caret"></span>
@@ -65,7 +46,7 @@
 
         <% else %>
 <!--          <li><%= link_to 'Sign Up', new_user_registration_path %></li>-->
-        <li><%= link_to 'Sign In', new_user_session_path, class: "#{action_name == "new" ? "active" : nil}" %></li>
+          <li><%= link_to 'Sign In', new_user_session_path, class: "#{action_name == "new" ? "active" : nil}" %></li>
         <% end %>
 
       </ul>
