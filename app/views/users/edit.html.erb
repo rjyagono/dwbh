@@ -13,15 +13,15 @@
                     <input type="email" name="user[email]" class="form-control" placeholder="Email" required autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="user[password]" class="form-control" placeholder="Password" required><br>
-                    <span class="hint">leave it blank if you don't want to change it</span>
+                    <input type="password" name="user[password]" class="form-control" placeholder="Password" required>
+                    <span class="hint">leave it blank if you don't want to change it</span><br>
                  </div>
                   <div class="form-group">
                     <input type="password" id="user_password_confirmation" name="user[password_confirmation]" placeholder="Password confirmation" class="form-control">
                  </div>
                  <div class="form-group">
-                    <input type="password" id="user_current_password" name="user[current_password]" class="form-control" placeholder="Current password"><br>
-                    <span class="hint">we need your current password to confirm your changes</span>
+                    <input type="password" id="user_current_password" name="user[current_password]" class="form-control" placeholder="Current password">
+                    <span class="hint">we need your current password to confirm your changes</span><br>
                   </div>
                 
                   <div class="form-group">
@@ -29,17 +29,17 @@
                   </div>
                 <% end %>
                 
+            <div class="col-sm-12 panel-footer">
                 <h3>Cancel my account</h3>
                 
                 <p>Unhappy? <%= link_to "Cancel my account", registration_path(@user), data: { confirm: "Are you sure?" }, method: :delete %></p>
                 
-                 
-
-                
                 <%= link_to 'Show', @user %>
+            </div>
                 
-                <!--https://www.youtube.com/watch?v=s09NJvm6VCM-->
             </div>
         </div>
     </div>
 </section>
+
+<!--https://www.youtube.com/watch?v=s09NJvm6VCM-->
