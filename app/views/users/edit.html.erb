@@ -10,16 +10,18 @@
                   <%= f.error_notification %>
                 
                   <div class="form-group">
-                    <%= f.input :email, required: true, autofocus: true %>
+                    <input type="email" name="user[email]" class="form-control" placeholder="Email" required autofocus>
                 </div>
                 <div class="form-group">
-                    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+                    <input type="password" name="user[password]" class="form-control" placeholder="Password" required><br>
+                    <span class="hint">leave it blank if you don't want to change it</span>
                  </div>
                   <div class="form-group">
-                    <%= f.input :password_confirmation, required: false %>
+                    <input type="password" id="user_password_confirmation" name="user[password_confirmation]" placeholder="Password confirmation" class="form-control">
                  </div>
                  <div class="form-group">
-                    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+                    <input type="password" id="user_current_password" name="user[current_password]" class="form-control" placeholder="Current password"><br>
+                    <span class="hint">we need your current password to confirm your changes</span>
                   </div>
                 
                   <div class="form-group">
