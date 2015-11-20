@@ -8,8 +8,12 @@
                 
                 <p>
                   <strong>Name:</strong>
-                    <%= (image_tag @user.image_url(:thumb).to_s) %>
                     <%= @user.name %>
+                </p>
+                <br>
+                <p>
+                  <strong>Email:</strong>
+                    <%= @user.enail %>
                 </p>
                 
                 <%= link_to 'Edit', edit_user_path(@user) %>
