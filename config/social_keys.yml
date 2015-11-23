@@ -1,0 +1,9 @@
+production:
+  facebook_key: "545268678973039"
+  facebook_secret: "ac1584509fd852fe0c6695376138f5f7"
+
+  twitter_key: "SmUB7OMeOn8yiziJ4N2aIvg92"
+  twitter_secret: "1UEIaqSjiVXhRseGLrVY6hQBJDTVqo22ZqCotvFKRA6LD9qXQ5"
+
+  google_key: "113961971625-usdatd2fea8t3a2lnrmac1fkiebuvjgb.apps.googleusercontent.com"
+  google_secret: "vS4Okug8oiyp5OhZiFy0RRL9"
