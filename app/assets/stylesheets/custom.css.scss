@@ -984,6 +984,9 @@ footer .footer-below {
 }
 
 @media (max-width: 1300px) {
+    body {
+        font-size: 14px;
+    }
     .navbar-text, .log-text {
         display: none;
     }
