@@ -1308,8 +1308,17 @@ input[type="text"], input[type="email"], input[type="number"], textarea, textare
   }
 }
 .footer-payment-logo {
-    text-align: right;
+    text-align: left;
+    
+    #u_0_3 {
+      color: #fff;
+    }
+    
+    a {
+      color: #fff;
+    }
 }
+
 .footer-payment-logo img {
     display: inline-block;
     margin: 0 10px;
