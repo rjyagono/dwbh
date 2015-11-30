@@ -19,6 +19,15 @@
     <link href="assets/dwbh-icon-4131070134febfde4754720505abb0c828bdb78e430fccfc60244fc7cec3baa0.png" rel="shortcut icon">
   </head>
   <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=545268678973039";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
 
      <%= render 'layouts/header' %>
   
