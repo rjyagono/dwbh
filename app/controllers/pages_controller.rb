@@ -6,6 +6,9 @@ class PagesController < ApplicationController
   def faq
   end
   
+  def amortization
+  end
+  
   def location
   end
   
