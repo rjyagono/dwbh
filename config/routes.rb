@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/faq', :to => 'pages#faq', :as => 'faq'
   get '/contact', :to => 'pages#contact', :as => 'contact'
   get '/amortization', :to => 'pages#amortization', :as => 'amortization'
+  get '/about_us', :to => 'pages#about_us', :as => 'about_us'
   
   root :to => 'pages#home'
   ActiveAdmin.routes(self)
