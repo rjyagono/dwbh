@@ -24,7 +24,17 @@
     <nav id="navigation" class="navigation navbar-collapse navbar-right collapse" aria-expanded="false" style="height: 81px; ">
       <ul class="nav navbar-nav navbar-right nav-menu-padding-top">
         <!--<li class="page-scroll "><%= link_to 'Home', '/#header', class: "#{action_name == "home" ? "active" : nil}"  %></li>-->
-        <li class="page-scroll "><%= link_to 'Services', '/#services', class: "#{action_name == "service" ? "active" : nil}" %></li>
+        
+        <li class="dropdown" role="presentation">
+          <a aria-expanded="false" aria-haspopup="true" role="button" href="#" data-toggle="dropdown" class="dropdown-toggle">
+            Loan Services<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Loan Products', '/#services' %></li>
+            <li><%= link_to 'Monthly Amortization', amortization_path %></li>
+          </ul>
+        </li>
+        
         <li class="page-scroll >"><%= link_to 'Loan Calculator',  "/#calculator", class: "#{action_name == "calculator" ? "active" : nil}"  %></li>
         <li class="page-scroll "><%= link_to 'Contact Us', contact_path, class: "#{action_name == "contact" ? "active" : nil}"  %></li>
         <li class="page-scroll "><%= link_to 'F.A.Q', faq_path, class: "#{action_name == "faq" ? "active" : nil}"  %></li>
