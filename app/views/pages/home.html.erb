@@ -1,11 +1,13 @@
 <section id="header" class="header" data-sr="enter left, hustle 20px">
    <div class="container">
-   
-    <div class="col-sm-7 text">
-        <h1 class="short-text" >Need an easy and fast <strong class="cash">Cash?</strong></h1>
-        <div class="short-text">
-          <p class="short-text">
-            Our proficiency comes with our Mortgage Loan Facility, which is a term-convenient loan program for a Real Estate Property or Chattel (Vehicle) Mortgage with a maximum loanable amount and with the highest appraisal value compared to other loan institutions.
+    <div class="col-lg-12">
+     <div class="col-sm-7 text">
+        <h1 style="text-align: center;font-size: 1.6rem" class="short-text"><strong style="" class="cash">3 DAYS LOAN APPROVAL</strong><strong class="cash"> </strong></h1>
+        <div style="text-align: left;font-size: 2rem" class="short-text">
+          <p class="short-text">              Real Estate Mortgage, Chattel Mortgage &amp; Other loan types Car, Home, Business, OFW, Salary, Seaman.              <br>
+             <b style="font-size: 10px">
+                <i>* anywhere from 3 - 5 days.</i>
+              </b>
           </p>
         </div>
         <div class="top-big-link text-center">
@@ -52,46 +54,38 @@
                     </form>
                 </div>
               </div>
-          </div>
-
+    </div>
+    
     <div class="clearfix"></div>
-     
-                       <div class="row front-msg">
-                        <div class="col-lg-4">
-                          <div class="short-text">
-                            <i class="glyphicon glyphicon-circle-arrow-down"></i> Lowest interest rates
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="short-text">
-                            <i class="glyphicon glyphicon-flash"></i> Fast and reliable loan
-                          </div>
-                        </div>
-                        <div class="col-lg-4 ">
-                          <div class="short-text">
-                            <i class="glyphicon glyphicon-ok"></i> Accurate appraisals
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="short-text">
-                            <i class="glyphicon glyphicon-glass"></i> Hassle-free and convenient
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="short-text">
-                            <i class="glyphicon glyphicon-calendar"></i> Flexible terms of payment
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="short-text">
-                            <i class="glyphicon glyphicon-gift"></i> Great incentives and benefits
-                          </div>
-                        </div>
-                      </div>
+    </div>
 </div>
  
 </section>
+<section class="how_id_works" id="how_id_works">
+  <div class="container ">
 
+      <h2 class="title text-center">How It Works</h2>
+
+    <div class="col-lg-3">
+      <%= image_tag "Document.png" , class: 'img-responsive' %> 
+      Submit Application
+    </div>
+    <div class="col-lg-1 arrow" style="padding-top: 5%">
+      <%= image_tag "052.png" , class: 'img-responsive' %> 
+    </div>
+    <div class="col-lg-3">
+      <%= image_tag "Thumb_Up.png" , class: 'img-responsive' %>
+      Get Approved
+    </div>
+    <div class="col-lg-1 arrow" style="padding-top: 5%">
+      <%= image_tag "052.png" , class: 'img-responsive' %> 
+    </div>
+    <div class="col-lg-3">
+      <%= image_tag "Money-Increase.svg" , class: 'img-responsive' %>
+      Get your Cash
+    </div>
+  </div>
+</section>
 <!--<div class="top"></div>-->
 <section class="services" id="services">
                 <div id="features">
@@ -246,38 +240,103 @@
 <!--<div class="bottom"></div>-->
 
 <section class="calculator" id="calculator" style="visibility: visible; ">
+  
       <div class="container">  
           <div class="row feature">
             <div class="text-center">
 
                     <h2 class="title text-center">Basic Loan Calculation</h2>
                     <p class="intro text-center short-text">This loan calculator will help you determine the monthly payments on a loan. Simply enter the loan amount, term and interest rate in the fields below.</p>
-
-                    <div class="col-lg-12 calculator-box">
+                    
+                 <div class="col-lg-12 calculator-box">
                       <div class="col-lg-6 thirty form ">
-                        <div class="accrue-field-amount">
-                          <p><label>Loan Amount:</label>
-                            <input type="text" value="10,000" class="amount form-control"></p>
+
+                        <div class="price-box">
+                  
+                          <form class="form-horizontal form-pricing" role="form" id="myForm">
+                  
+                            <div class="price-slider">
+                              <h4 class="great">Loan Amount</h4>
+                              <span>Minimum ₱5,000 is required</span>
+                              <div class="col-sm-12">
+                                <div id="slider"></div>
+                              </div>
+                            </div>
+                            
+                            <div class="price-slider">
+                              <h4 class="great">Duration</h4>
+                              <span>Minimum 1 month is required</span>
+                              <div class="col-sm-12">
+                                <div id="slider2"></div>
+                              </div>
+                            </div>
+                            
+                            <div class="price-slider">
+                              <h4 class="great">Interest</h4>
+                              <span>Select from 1.5% or 3%</span>
+                              <div class="col-sm-12">
+                                <div id="radio">
+                                  <div class="radio">
+                                    <label><input type="radio" name="interest" id="interest" value="0.015">Real Estate Mortgage (1.5%)</label>
+                                  </div>
+                                  <div class="radio">
+                                    <label><input type="radio" name="interest" id="interest" value="0.03">Chattel Mortgage (3%)</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                  
                         </div>
-                        <div class="accrue-field-rate">
-                          <p><label>Interest Rate:</label><input type="text" value="1.5" class="rate form-control"><small>Format: 1, 1.5, 2 etc.</small></p>
-                        </div>
-                        <div class="accrue-field-term">
-                          <p><label>Term / Months:</label><input type="text" value="3" class="term form-control"><small>Format: 12, 24, 36 etc.</small></p>
-                        </div>
-                      </div>
+
+                     </div>
 
                       <div class="col-lg-6 thirty">
-                        <p><label>Results:</label></p>
-                        <div class="results">
-                          <p style="display:none"><strong>Monthly Payment:</strong><br>P3833.33</p>
-                          <p><strong>Number of Payments:</strong><br>3</p>
-                          <p><strong>Total Payments:</strong><br>P11500.00</p>
-                          <p style="display:none"><strong>Total Interest:</strong><br>P1500.00</p></div>
-                      </div>
-                    </div>
+                  
+                        <div class="price-box">
+                  
+                          <form class="form-horizontal form-pricing" role="form">
 
-                    <div class="clear"></div>
+                            <div class="price-form">
+                  
+                              <div class="form-group">
+                                <label for="amount" class="col-sm-6 control-label">Amount (₱): </label>
+                                <span class="help-text">Please choose your amount</span>
+                                <div class="col-sm-6">
+                                  <input type="hidden" id="amount" class="form-control">
+                                  <p class="price lead" id="amount-label"></p>
+                                  <span class="price">.00</span>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="duration" class="col-sm-6 control-label">Duration: </label>
+                                <span class="help-text">Choose your commitment</span>
+                                <div class="col-sm-6">
+                                  <input type="hidden" id="duration" class="form-control">
+                                  <p class="price lead" id="duration-label"></p>
+                                  <span class="price">months</span>
+                                </div>
+                              </div>
+                              <hr class="style">
+                              <div class="form-group total">
+                                <label for="total" class="col-sm-6 control-label"><strong>Amortization: </strong></label>
+                                <span class="help-text">(Your Monthly Installment)</span>
+                                <div class="col-sm-6">
+                                  <input type="hidden" id="total" class="form-control">
+                                  <p class="price lead" id="total-label"></p>
+                                  <!--<span class="price">.00</span>-->
+                                </div>
+                              </div>
+                  
+                            </div>
+                  
+                  
+                          </form>
+                  
+                        </div>
+
+                      </div>
+                   </div>
 
         </div>                      
       </div>

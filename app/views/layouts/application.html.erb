@@ -53,7 +53,7 @@
      <%= javascript_include_tag "application" %>
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
+    
     <%= yield :scripts %>
   </body>
 
@@ -64,7 +64,7 @@
         $(document).ready(function(){
 
           // set up normal loan calculation
-          $(".calculator-box").accrue();
+          //$(".calculator-box").accrue();
 
         });
       
@@ -90,17 +90,17 @@
 			var scroll = $(window).scrollTop();
 
 			if (scroll >= 20) {
-				$('section.navigation').addClass('fixed');
-				$('header').css({
-					"border-bottom": "none",
-					"padding": "20px 0"
-				});
-				$('header .member-actions').css({
-					"top": "26px",
-				});
-				$('header .navicon').css({
-					"top": "34px",
-				});
+				// $('section.navigation').addClass('fixed');
+				// $('header').css({
+				// 	"border-bottom": "none",
+				// 	"padding": "20px 0"
+				// });
+				// $('header .member-actions').css({
+				// 	"top": "26px",
+				// });
+				// $('header .navicon').css({
+				// 	"top": "34px",
+				// });
 			} else {
 				$('section.navigation').removeClass('fixed');
 				$('header').css({
@@ -158,6 +158,7 @@
 
 
   </script>
+  
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -169,4 +170,75 @@
 	
 	</script>
  
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+ 
+ <script>
+      $(document).ready(function() {
+          $("#slider").slider({
+              range: "min",
+              animate: true,
+              value:1,
+              min: 5000,
+              max: 1000000,
+              step: 10,
+              slide: function(event, ui) {
+                update(1,ui.value); //changed
+              }
+          });
+
+          $("#slider2").slider({
+              range: "min",
+              animate: true,
+              value:1,
+              min: 1,
+              max: 48,
+              step: 1,
+              slide: function(event, ui) {
+                update(2,ui.value); //changed
+              }
+          });
+          
+
+          //Added, set initial value.
+          $("#amount").val(5000);
+          $("#duration").val(1);
+          $("#amount-label").text(5000);
+          $("#duration-label").text(1);
+          
+          $('#myForm input').on('change', function() {
+			   update(); 
+			});
+          
+          update();
+      });
+
+      //changed. now with parameter
+      function update(slider,val) {
+        //changed. Now, directly take value from ui.value. if not set (initial, will use current value.)
+        var $amount = slider == 1?val:$("#amount").val();
+        var $duration = slider == 2?val:$("#duration").val();
+        var $interest = $('input[name=interest]:checked', '#myForm').val() == undefined ? $("#interest").val() : $('input[name=interest]:checked', '#myForm').val();
+
+        /* commented
+        $amount = $( "#slider" ).slider( "value" );
+        $duration = $( "#slider2" ).slider( "value" );
+         */
+         
+         $interest_amount = (parseInt($amount)+(parseInt($amount) * parseFloat($interest) ));
+         $interest_amount_total = "₱" + Math.round($interest_amount/$duration);
+         
+         //$total = "P" + ($amount * $duration);
+         $( "#amount" ).val($amount);
+         $( "#amount-label" ).text($amount);
+         $( "#duration" ).val($duration);
+         $( "#duration-label" ).text($duration);
+         $( "#total" ).val($interest_amount_total);
+         $( "#total-label" ).text($interest_amount_total);
+
+         $('#slider a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+         $('#slider2 a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$duration+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+
+      }
+
+    </script>
 </html>
