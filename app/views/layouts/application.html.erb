@@ -208,18 +208,17 @@
           $('#myForm input').on('change', function() {
 			   update(); 
 			});
-          
+
+         
           update();
       });
-      
-      $("#amount").on('keydown', function() {
-         update();
-     });
-     
-     $("#duration").on('keydown', function() {
-         update();
-     });
 
+          $('#myFormResult input').on('keyup', function() {
+               $( "#amount" ).val($("#amount").val());
+               $( "#duration" ).val($("#duration").val());
+			   update(); 
+			});
+         
       //changed. now with parameter
       function update(slider,val) {
         //changed. Now, directly take value from ui.value. if not set (initial, will use current value.)
@@ -232,7 +231,7 @@
         $duration = $( "#slider2" ).slider( "value" );
          */
          
-         $interest_amount = (parseInt($amount)+(parseInt($amount) * parseFloat($interest) ));
+         $interest_amount = (parseInt($amount)+((parseInt($amount) * parseFloat($interest))*$duration));
          $interest_amount_total = "₱" + Math.round($interest_amount/$duration).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
          
          //$total = "P" + ($amount * $duration);
