@@ -11,7 +11,7 @@
           </p>
         </div>
         <div class="top-big-link text-center">
-          <a href="/downloads/ApplicationForm.docx" class="btn"><%= image_tag "download-button.png" , class: 'img-responsive', style: 'width: 250px' %></a>
+          <a href="/downloads/ApplicationForm.pdf" class="btn"><%= image_tag "download-button.png" , class: 'img-responsive', style: 'width: 250px' %></a>
           <!--<a href="#features" class="btn btn-primary btn-lg round"><%= image_tag "download-button1.png" , class: 'img-responsive' %></a>-->
         </div>
     </div>
@@ -229,9 +229,9 @@
                               <br/>
                                     <div class="row">
                                       <button type="button" class="list-group-item"><b>Coverage Areas:</b>
-                                        <small>Carcar City, San Fernando, Minglanilla, Talisay City, Cebu City, Mandaue City, Lapu-lapu City, Consolacion, Compostela, Liloan, Danao City</small></button>
+                                        <small>Minglanilla, Talisay City, Cebu City, Mandaue City, Lapu-lapu City, Consolacion, Compostela</small></button>
                                       <button type="button" class="list-group-item"><b>Mode of Payment: </b><small>Post-dated checks</small></button>
-                                      <button type="button" class="list-group-item"><b>Processing Time: </b><small>1 day processing loan</small></button>
+                                      <button type="button" class="list-group-item"><b>Processing Time: </b><small>3-5 day processing loan</small></button>
                                     </div>
                             </div>
                         </div>      
@@ -303,8 +303,8 @@
                                 <label for="amount" class="col-sm-6 control-label">Amount (₱): </label>
                                 <span class="help-text">Please choose your amount</span>
                                 <div class="col-sm-6">
-                                  <input type="hidden" id="amount" class="form-control">
-                                  <p class="price lead" id="amount-label"></p>
+                                  <input type="text" id="amount" class="form-control price lead">
+                                  <p class="price lead" id="amount-label" style="display:none"></p>
                                   <span class="price">.00</span>
                                 </div>
                               </div>
@@ -312,8 +312,8 @@
                                 <label for="duration" class="col-sm-6 control-label">Duration: </label>
                                 <span class="help-text">Choose your commitment</span>
                                 <div class="col-sm-6">
-                                  <input type="hidden" id="duration" class="form-control">
-                                  <p class="price lead" id="duration-label"></p>
+                                  <input type="text" id="duration" class="form-control price lead">
+                                  <p class="price lead" id="duration-label" style="display:none"></p>
                                   <span class="price">months</span>
                                 </div>
                               </div>

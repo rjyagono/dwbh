@@ -211,6 +211,14 @@
           
           update();
       });
+      
+      $("#amount").on('keydown', function() {
+         update();
+     });
+     
+     $("#duration").on('keydown', function() {
+         update();
+     });
 
       //changed. now with parameter
       function update(slider,val) {
@@ -225,10 +233,10 @@
          */
          
          $interest_amount = (parseInt($amount)+(parseInt($amount) * parseFloat($interest) ));
-         $interest_amount_total = "₱" + Math.round($interest_amount/$duration);
+         $interest_amount_total = "₱" + Math.round($interest_amount/$duration).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
          
          //$total = "P" + ($amount * $duration);
-         $( "#amount" ).val($amount);
+         $( "#amount" ).val(parseFloat($amount));
          $( "#amount-label" ).text($amount);
          $( "#duration" ).val($duration);
          $( "#duration-label" ).text($duration);
