@@ -26,7 +26,7 @@
                           <div class="col-md-6 col-md-offset-2" id="task-form" style="display:none;"></div>
                         </div>
 
-                        <div id="error_explanation" style='display:none;'>
+                        <div id="error_explanation" class="alert alert-danger" style='display:none;'>
                           <ul>
                             <% if @client.errors.any? %>
                               <% @client.errors.full_messages.each do |msg| %>
@@ -42,9 +42,9 @@
                         <div class="form-group">
                           <input type="email" maxlength="100" id="client" name="client[email]" placeholder="Email" class="form-control" data-error="Email address is invalid" required>                    
                         </div>
-                        <div class="input-group form-group">
-                          <span class="input-group-addon">+63</span>
-                          <input type="text" class="form-control" aria-label="Phone" name="client[phone]" placeholder="Mobile" required>
+                        <div class="form-group">
+<!--                           <span class="input-group-addon">+63</span> -->
+                          <input type="tel "pattern="[0-9]{11}" class="form-control" name="client[phone]" placeholder="ex. 09123456789" required >
                         </div>
 
                         <input type="submit" value="Get pre-approved »" name="yt0" class="btn btn-yellow pull-right btn-approve">  

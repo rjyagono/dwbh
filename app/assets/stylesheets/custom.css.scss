@@ -837,7 +837,7 @@ section.contact {
     padding: 20px;
     position: relative;
     text-align: left;
-    text-shadow: 1px 1px 1px #091e34;
+    text-shadow: none;
     z-index: 1;
 }
 
@@ -847,7 +847,7 @@ section.contact {
     background-repeat: no-repeat;
     border-color: #c6c6c6;
     color: #000000;
-    text-shadow: 1px 1px 1px #ffffff;
+    text-shadow: none;
 }
 
 .contact-form .input-group-addon:first-child {

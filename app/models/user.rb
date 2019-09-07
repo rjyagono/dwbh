@@ -4,7 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   
+  validates :name, :presence => true
   validates :email, :presence => true
+  validates :phone, :presence => true, numericality: true
+
   mount_uploader :image, ImageUploader
   has_many :authorizations
   
