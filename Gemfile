@@ -63,3 +63,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'quiet_assets'
 end
+
+gem 'dotenv-rails', groups: [:development, :test]
+gem "recaptcha", require: "recaptcha/rails"
