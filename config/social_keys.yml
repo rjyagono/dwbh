@@ -7,3 +7,7 @@ production:
 
   google_key: "113961971625-usdatd2fea8t3a2lnrmac1fkiebuvjgb.apps.googleusercontent.com"
   google_secret: "vS4Okug8oiyp5OhZiFy0RRL9"
+
+
+  RECAPTCHA_API_PUBLIC_KEY: '6LfwPrcUAAAAAOGfuq9dhXTg-n8S3vjfjLIm0EIR'
+  RECAPTCHA_API_PRIVATE_KEY: '6LfwPrcUAAAAAEEIbR9r12MHK4WRCdcIxXcK1ujj'
