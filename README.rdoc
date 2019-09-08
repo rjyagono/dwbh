@@ -21,6 +21,15 @@ Things you may want to cover:
 
 * Deployment instructions
 
+
+# ps aux | grep puma    # Get puma pid
+# pkill -f puma   # Kill puma
+# kill -s SIGUSR2 pid   # Restart puma
+# kill -s SIGTERM pid   # Stop puma
+
+Note:
+	if deployment is not working try to stop the puma server and run again the deployment command
+
 * ...
 
 
