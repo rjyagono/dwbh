@@ -16,9 +16,10 @@ class UsersController < ApplicationController
   def create
     @client = User.new(client_params)
     
-    if @client.save
-      @client.request = request
+    if verify_recaptcha(model: @client) && @client.save
+      @client.client = request
     end
+ 
   end
 
   def update
