@@ -18,7 +18,7 @@ class ClientsController < ApplicationController
     @client = User.new(client_params.merge(:password => password, :password_confirmation => password))
     
     respond_to do |format|
-       if @client.save
+       if verify_recaptcha(model: @client) && @client.save
          format.html { redirect_to @client, notice: 'Thing was successfully created.' }
          #format.json { render action: 'show', status: :created, location: @client }
          format.js { render json: @client, content_type: 'text/json',  status: :ok }
