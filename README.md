@@ -1,2 +1,2 @@
 # dwbh
-this is a dwbh site
+This is a sample website only
